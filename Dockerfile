@@ -57,6 +57,8 @@ RUN \
 
 
 RUN \
+  addgroup -g 10101 bamboo && \
+  adduser -S -s /bin/false -u 10101 -G bamboo -g "Bamboo Service User" bamboo && \
   mkdir /src && \
 	chown -R bamboo:bamboo /src
 
